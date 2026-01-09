@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070d14;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 1rem;
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  min-width: 100%;
+}
+
+.marquee-left .marquee-content {
+  animation: scroll-left 28s linear infinite;
+}
+
+.marquee-right .marquee-content {
+  animation: scroll-right 28s linear infinite;
+}
+
+.feature-box {
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo-gradient {
+  background: linear-gradient(
+    270deg,
+    #22c55e,
+    #2dd4bf,
+    #3b82f6,
+    #8b5cf6
+  );
+  background-size: 600% 600%;
+  animation: gradient-move 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
