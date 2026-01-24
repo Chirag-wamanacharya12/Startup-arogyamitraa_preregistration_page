@@ -47,27 +47,33 @@ export default function CountdownTimer() {
   if (!mounted) return null;
 
   return (
-    <div className="bg-[#0b1623] px-12 py-8 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] text-center mb-10 mx-4">
-      <div className="text-5xl font-extrabold flex justify-center space-x-2">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-teal-400 to-blue-500 drop-shadow-lg">
-          {timeLeft.days}
-        </span>
-        <span className="text-slate-400">:</span>
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 drop-shadow-lg">
-          {timeLeft.hours}
-        </span>
-        <span className="text-slate-400">:</span>
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 drop-shadow-lg">
-          {timeLeft.minutes}
-        </span>
-        <span className="text-slate-400">:</span>
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-indigo-500 drop-shadow-lg">
-          {timeLeft.seconds}
-        </span>
+    <div className="flex flex-col items-center mb-10 mx-4">
+      <p className="text-sm text-slate-400 font-semibold uppercase tracking-widest mb-4">
+        Public Launch In
+      </p>
+
+      <div className="bg-[#0b1623] px-12 py-8 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] text-center">
+        <div className="text-5xl font-extrabold flex justify-center space-x-2">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-teal-400 to-blue-500 drop-shadow-lg">
+            {timeLeft.days}
+          </span>
+          <span className="text-slate-400">:</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 drop-shadow-lg">
+            {timeLeft.hours}
+          </span>
+          <span className="text-slate-400">:</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 drop-shadow-lg">
+            {timeLeft.minutes}
+          </span>
+          <span className="text-slate-400">:</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-indigo-500 drop-shadow-lg">
+            {timeLeft.seconds}
+          </span>
+        </div>
       </div>
 
-      <p className="text-teal-400 text-lg mt-6 tracking-wide">
-        {currentDate}
+      <p className="text-teal-400/80 text-sm mt-4 font-medium">
+        Early access opens before launch for preregistered users.
       </p>
     </div>
   );
