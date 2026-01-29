@@ -144,7 +144,7 @@ export default function Preregister() {
         {/* Right Side: Form */}
         <div className="flex-1 lg:max-w-md">
             {submitted ? (
-                <div className="bg-white/5 p-8 rounded-2xl border border-teal-500/30 text-center py-16 animate-fade-in sticky top-32">
+                <div className="bg-white/5 p-8 rounded-2xl border border-teal-500/30 text-center py-16 animate-fade-in md:sticky md:top-32">
                     <div className="w-20 h-20 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                         <span className="text-4xl">✨</span>
                     </div>
@@ -154,7 +154,7 @@ export default function Preregister() {
                     </p>
                 </div>
             ) : (
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10 sticky top-32">
+                <div className="bg-white/5 p-8 rounded-2xl border border-white/10 md:sticky md:top-32">
                     <div className="mb-6">
                         <h2 className="text-2xl font-semibold text-white">Request Early Access</h2>
                         <p className="text-sm text-slate-400 mt-2">This helps us activate your account responsibly.</p>
