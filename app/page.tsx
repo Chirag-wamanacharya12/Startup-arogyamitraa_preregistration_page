@@ -98,6 +98,49 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="w-full px-6 py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Meet the Creators</h2>
+            <p className="text-slate-400 text-lg">The people shaping a calmer, connected healthcare experience.</p>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
+            <div className="bg-white/5 rounded-2xl border border-white/10 hover:border-teal-500/30 transition p-6">
+              <div className="w-full h-125 mb-4 rounded-xl bg-gradient-to-br from-teal-500 to-blue-600" >
+                <img src="images/chirag.jpg" alt="Chirag Wamanacharya" className="w-full h-full rounded-xl object-cover" />
+              </div>
+              <div className="flex items-center gap-4 mb-5">
+                <div>
+                  <h3 className="text-xl font-bold text-white">Chirag Wamanacharya</h3>
+                  <p className="text-sm text-slate-400">Founder & Product Lead</p>
+                </div>
+              </div>
+              <p className="text-slate-300 text-sm leading-relaxed">Designing systems that reduce anxiety and keep care continuous.</p>
+              <div className="mt-6 flex items-center justify-between">
+                <a href="https://tinyurl.com/chiragwamanacharya" target="_blank" className="px-4 py-2 rounded-lg bg-white/10 text-white font-medium hover:bg-white/20 transition">Explore profile</a>
+                <span className="text-xs text-slate-500">Joined 2025 </span>
+              </div>
+            </div>
+            <div className="bg-white/5 rounded-2xl border border-white/10 hover:border-teal-500/30 transition p-6">
+              <div className="w-full h-125 mb-4 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600" >
+                <img src="images/shivani.jpg" alt="Shivani Patil" className="w-full h-full rounded-xl object-cover" />
+              </div>
+              <div className="flex items-center gap-4 mb-5">
+                <div>
+                  <h3 className="text-xl font-bold text-white">Shivani Patil</h3>
+                  <p className="text-sm text-slate-400">Founding member & Lead Frontend Developer</p>
+                </div>
+              </div>
+              <p className="text-slate-300 text-sm leading-relaxed">Building secure, standards-aligned infrastructure for everyday care.</p>
+              <div className="mt-6 flex items-center justify-between">
+                <a href="https://tinyurl.com/shivanipatillinkedin" target="_blank" className="px-4 py-2 rounded-lg bg-white/10 text-white font-medium hover:bg-white/20 transition">Explore profile </a>
+                <span className="text-xs text-slate-500">Joined 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="py-24 px-6 text-center w-full max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
