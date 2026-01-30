@@ -14,7 +14,7 @@ export default function CountdownTimer() {
 
   useEffect(() => {
     setMounted(true);
-    const launchDate = new Date('April 7, 2026 00:00:00').getTime();
+    const launchDate = new Date('June 21, 2026 00:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
