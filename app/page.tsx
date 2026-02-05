@@ -40,7 +40,7 @@ export default function Home() {
       <CountdownTimer />
       
       {/* Feature Chips Section */}
-      <div className="w-full py-16 flex flex-col items-center">
+      <div className="w-full py-12 md:py-16 flex flex-col items-center">
         <div className="text-center mb-10 px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Arogyamitraaa Brings Together</h2>
             <p className="text-slate-400 text-lg">A single platform designed to simplify everyday healthcare.</p>
@@ -51,8 +51,8 @@ export default function Home() {
       </div>
 
       {/* Who This Is For Bridge */}
-      <div className="max-w-7xl mx-auto px-6 py-20 w-full">
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 w-full">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-teal-500/30 transition duration-300">
                 <h3 className="text-xl font-bold text-white mb-3">For Individuals</h3>
                 <p className="text-slate-400 leading-relaxed">
@@ -98,16 +98,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full px-6 py-16">
+      <div className="w-full px-6 py-12 md:py-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Meet the Creators</h2>
             <p className="text-slate-400 text-lg">The people shaping a calmer, connected healthcare experience.</p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
+          <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2">
             <div className="bg-white/5 rounded-2xl border border-white/10 hover:border-teal-500/30 transition p-6">
-              <div className="w-full h-125 mb-4 rounded-xl bg-gradient-to-br from-teal-500 to-blue-600" >
-                <img src="images/chirag.jpg" alt="Chirag Wamanacharya" className="w-full h-full rounded-xl object-cover" />
+              <div className="w-full aspect-[4/5] mb-4 rounded-xl bg-gradient-to-br from-teal-500 to-blue-600 overflow-hidden" >
+                <img src="images/chirag.jpg" alt="Chirag Wamanacharya" className="w-full h-full object-cover hover:scale-105 transition duration-500" />
               </div>
               <div className="flex items-center gap-4 mb-5">
                 <div>
@@ -122,8 +122,8 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-white/5 rounded-2xl border border-white/10 hover:border-teal-500/30 transition p-6">
-              <div className="w-full h-125 mb-4 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600" >
-                <img src="images/shivani.jpg" alt="Shivani Patil" className="w-full h-full rounded-xl object-cover" />
+              <div className="w-full aspect-[4/5] mb-4 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 overflow-hidden" >
+                <img src="images/shivani.jpg" alt="Shivani Patil" className="w-full h-full object-cover hover:scale-105 transition duration-500" />
               </div>
               <div className="flex items-center gap-4 mb-5">
                 <div>
@@ -142,7 +142,7 @@ export default function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="py-24 px-6 text-center w-full max-w-4xl mx-auto">
+      <div className="py-16 md:py-24 px-6 text-center w-full max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             {/* Primary CTA */}
             <div className="flex flex-col items-center gap-3 w-full md:w-auto">

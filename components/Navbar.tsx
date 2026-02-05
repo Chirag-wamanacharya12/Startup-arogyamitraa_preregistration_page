@@ -13,7 +13,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+        <div className="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
           <Link href="/care-standards" className="hover:text-teal-400 transition">Care Standards</Link>
           <Link href="/how-it-works" className="hover:text-teal-400 transition">How It Works</Link>
           <Link href="/features" className="hover:text-teal-400 transition">Features</Link>
@@ -22,7 +22,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <Link href="/notify"
-            className="ml-4 px-5 py-2 rounded-xl bg-gradient-to-r from-green-400 via-teal-400 to-blue-500 text-black font-semibold shadow-lg hover:scale-105 transition">
+            className="ml-6 px-6 py-2.5 rounded-xl bg-gradient-to-r from-green-400 via-teal-400 to-blue-500 text-black font-semibold shadow-lg hover:scale-105 transition">
             Notify Me
           </Link>
         </div>
@@ -33,49 +33,51 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen(!open)}
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-300 hover:text-white hover:bg-white/10 transition"
+          className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-300 hover:text-white hover:bg-white/10 transition z-50 relative"
         >
-          <svg className={`h-6 w-6 ${open ? 'hidden' : 'block'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg className={`h-6 w-6 ${open ? 'block' : 'hidden'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          <div className="w-6 h-6 flex flex-col justify-center items-center gap-1.5">
+            <span className={`block w-5 h-0.5 bg-current transition-transform duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-5 h-0.5 bg-current transition-opacity duration-300 ${open ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-5 h-0.5 bg-current transition-transform duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </div>
         </button>
       </div>
 
       {/* Mobile Drawer */}
       <div
         id="mobile-menu"
-        className={`md:hidden fixed inset-0 z-[55] transition ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        className={`lg:hidden fixed inset-0 z-40 transition-visibility duration-300 ${open ? 'visible' : 'invisible delay-300'}`}
         aria-hidden={!open}
       >
         {/* Overlay */}
         <div
           onClick={() => setOpen(false)}
-          className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${open ? 'opacity-100' : 'opacity-0'}`}
         />
         {/* Panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-[#0b1623] border-l border-white/10 shadow-xl transform transition-transform ${
+          className={`absolute top-0 right-0 h-full w-[75vw] max-w-xs bg-[#0b1623] border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-out ${
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
           role="dialog"
           aria-label="Navigation"
         >
-          <div className="px-5 py-6 space-y-4">
-            <Link onClick={() => setOpen(false)} href="/care-standards" className="block text-slate-200 hover:text-teal-400">Care Standards</Link>
-            <Link onClick={() => setOpen(false)} href="/how-it-works" className="block text-slate-200 hover:text-teal-400">How It Works</Link>
-            <Link onClick={() => setOpen(false)} href="/features" className="block text-slate-200 hover:text-teal-400">Features</Link>
-            <Link onClick={() => setOpen(false)} href="/about" className="block text-slate-200 hover:text-teal-400">About</Link>
-            <Link onClick={() => setOpen(false)} href="/preregister" className="block text-slate-200 hover:text-teal-400">Preregister</Link>
-            <Link
-              onClick={() => setOpen(false)}
-              href="/notify"
-              className="mt-4 inline-flex w-full justify-center px-5 py-3 rounded-xl bg-gradient-to-r from-green-400 via-teal-400 to-blue-500 text-black font-semibold shadow-lg"
-            >
-              Notify Me
-            </Link>
+          <div className="flex flex-col pt-24 px-6 pb-6 space-y-6 bg-[#0b1623] rounded-bl-lg">
+            <Link onClick={() => setOpen(false)} href="/care-standards" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">Care Standards</Link>
+            <Link onClick={() => setOpen(false)} href="/how-it-works" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">How It Works</Link>
+            <Link onClick={() => setOpen(false)} href="/features" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">Features</Link>
+            <Link onClick={() => setOpen(false)} href="/about" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">About</Link>
+            <Link onClick={() => setOpen(false)} href="/preregister" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">Preregister</Link>
+            
+            <div className="pt-2">
+                <Link
+                onClick={() => setOpen(false)}
+                href="/notify"
+                className="inline-flex w-full justify-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-green-400 via-teal-400 to-blue-500 text-black font-bold text-lg shadow-lg active:scale-95 transition-transform"
+                >
+                Notify Me
+                </Link>
+            </div>
           </div>
         </div>
       </div>
