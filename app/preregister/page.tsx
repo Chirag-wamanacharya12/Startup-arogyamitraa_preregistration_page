@@ -31,42 +31,9 @@ export default function Preregister() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    setError('');
-
-    if (!validateEmail(formData.email)) {
-        setError('Please enter a valid email address.');
-        setLoading(false);
-        return;
-    }
-
-    if (!validatePhone(formData.phone)) {
-        setError('Please enter a valid mobile number (e.g., +91 98765 43210).');
-        setLoading(false);
-        return;
-    }
-
-    try {
-      const response = await fetch('/api/preregister', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
-      }
-
-      setSubmitted(true);
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+    // Form is disabled - prevent any submission
+    setError('Preregistration is currently disabled. Please check back later.');
+    return;
   };
 
   return (
@@ -142,7 +109,7 @@ export default function Preregister() {
         </div>
 
         {/* Right Side: Form */}
-        <div className="flex-1 lg:max-w-md">
+        <div className="flex-1 lg:max-w-md" >
             {submitted ? (
                 <div className="bg-white/5 p-8 rounded-2xl border border-teal-500/30 text-center py-16 animate-fade-in md:sticky md:top-32">
                     <div className="w-20 h-20 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -162,7 +129,16 @@ export default function Preregister() {
 
                     <PreregisterCountdown />
 
-                    <form className="space-y-5" onSubmit={handleSubmit}>
+                    <form className="space-y-5 relative" onSubmit={handleSubmit} >
+                        {/* Disabled overlay */}
+                        <div className="h-full absolute inset-0 bg-black/60 rounded-lg z-10 flex items-center justify-center">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20">
+                                <div className="text-2xl mb-2">🔒</div>
+                                <div className="text-white font-semibold mb-1">Preregistration Starting soon</div>
+                                <div className="text-slate-300 text-sm">Please check back later</div>
+                            </div>
+                        </div>
+                        
                         {error && (
                             <div className="bg-red-500/10 border border-red-500/50 text-red-200 p-3 rounded-lg text-sm">
                                 {error}
@@ -176,8 +152,9 @@ export default function Preregister() {
                                 name="fullName"
                                 value={formData.fullName}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white placeholder-slate-600 transition-colors" 
+                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white placeholder-slate-600 transition-colors cursor-not-allowed" 
                                 placeholder="Your Name" 
+                                disabled
                             />
                         </div>
                         <div>
@@ -188,8 +165,9 @@ export default function Preregister() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white placeholder-slate-600 transition-colors" 
+                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white placeholder-slate-600 transition-colors cursor-not-allowed" 
                                 placeholder="your@email.com" 
+                                disabled
                             />
                         </div>
                         <div>
@@ -200,8 +178,9 @@ export default function Preregister() {
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white placeholder-slate-600 transition-colors" 
+                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white placeholder-slate-600 transition-colors cursor-not-allowed" 
                                 placeholder="+91 98765 43210" 
+                                disabled
                             />
                         </div>
                         <div>
@@ -210,7 +189,8 @@ export default function Preregister() {
                                 name="role"
                                 value={formData.role}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white transition-colors cursor-pointer"
+                                className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 focus:border-teal-500 focus:outline-none text-white transition-colors cursor-not-allowed"
+                                disabled
                             >
                                 <option value="member">Member (Early care access)</option>
                                 <option value="doctor">Doctor (Clinical consultation & diagnosis)</option>
@@ -223,10 +203,10 @@ export default function Preregister() {
                         
                         <button 
                             type="submit" 
-                            disabled={loading}
-                            className="w-full py-3.5 rounded-lg bg-gradient-to-r from-teal-500 to-blue-600 font-semibold hover:opacity-90 transition shadow-lg shadow-teal-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                            disabled={true}
+                            className="w-full py-3.5 rounded-lg bg-gradient-to-r from-gray-600 to-gray-700 font-semibold cursor-not-allowed opacity-50 transition"
                         >
-                            {loading ? 'Submitting...' : 'Preregister Now'}
+                            Preregistration Disabled
                         </button>
                     </form>
 

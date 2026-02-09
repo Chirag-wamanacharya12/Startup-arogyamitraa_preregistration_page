@@ -17,6 +17,7 @@ export default function Navbar() {
           <Link href="/care-standards" className="hover:text-teal-400 transition">Care Standards</Link>
           <Link href="/how-it-works" className="hover:text-teal-400 transition">How It Works</Link>
           <Link href="/features" className="hover:text-teal-400 transition">Features</Link>
+          <Link href="/ecosystem" className="hover:text-teal-400 transition">Ecosystem</Link>
           <Link href="/about" className="hover:text-teal-400 transition">About</Link>
           <Link href="/preregister" className="hover:text-teal-400 transition">Preregister</Link>
 
@@ -66,6 +67,7 @@ export default function Navbar() {
             <Link onClick={() => setOpen(false)} href="/care-standards" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">Care Standards</Link>
             <Link onClick={() => setOpen(false)} href="/how-it-works" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">How It Works</Link>
             <Link onClick={() => setOpen(false)} href="/features" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">Features</Link>
+            <Link onClick={() => setOpen(false)} href="/ecosystem" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">Ecosystem</Link>
             <Link onClick={() => setOpen(false)} href="/about" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">About</Link>
             <Link onClick={() => setOpen(false)} href="/preregister" className="text-lg font-medium text-slate-200 hover:text-teal-400 border-b border-white/5 pb-4">Preregister</Link>
             

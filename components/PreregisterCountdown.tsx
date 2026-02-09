@@ -14,7 +14,7 @@ export default function PreregisterCountdown() {
   useEffect(() => {
     setMounted(true);
     // Preregistration closes a few days before launch (April 7)
-    const closingDate = new Date('June 1, 2026 00:00:00').getTime();
+    const closingDate = new Date('July 1, 2026 00:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -43,8 +43,8 @@ export default function PreregisterCountdown() {
 
   return (
     <div className="mb-6 bg-white/5 border border-white/10 rounded-lg p-4">
-        <p className="text-xs text-red-400 font-semibold uppercase tracking-widest mb-2 text-center">
-            Preregistration Closes In
+        <p className="text-xs text-green-400 font-semibold uppercase tracking-widest mb-2 text-center">
+            Preregistration Starting In
         </p>
         <div className="flex justify-center gap-4 text-center">
             <div>
