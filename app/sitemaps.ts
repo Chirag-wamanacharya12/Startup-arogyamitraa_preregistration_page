@@ -10,9 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/features',
     '/contact',
     '/for-you',
-    '/ecosystem',
-    '/preregister',
-    '/notify'
+    '/ecosystem'
   ]
 
   return pages.map((page) => ({
