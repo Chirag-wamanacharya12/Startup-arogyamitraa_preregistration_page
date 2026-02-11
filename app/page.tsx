@@ -121,7 +121,7 @@ export default function Home() {
                 <span className="text-xs text-slate-500">Joined 2025 </span>
               </div>
             </div>
-            <div className="bg-white/5 rounded-2xl border border-white/10 hover:border-teal-500/30 transition p-6">
+            {/* <div className="bg-white/5 rounded-2xl border border-white/10 hover:border-teal-500/30 transition p-6">
               <div className="w-full aspect-[4/5] mb-4 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 overflow-hidden" >
                 <img src="images/shivani.jpg" alt="Shivani Patil" className="w-full h-full object-cover hover:scale-105 transition duration-500" />
               </div>
@@ -136,7 +136,7 @@ export default function Home() {
                 <a href="https://tinyurl.com/shivanipatillinkedin" target="_blank" className="px-4 py-2 rounded-lg bg-white/10 text-white font-medium hover:bg-white/20 transition">Explore profile </a>
                 <span className="text-xs text-slate-500">Joined 2025</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
