@@ -140,29 +140,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 — Shivani */}
-            <div className="group relative rounded-3xl overflow-hidden">
-              {/* Animated border glow */}
-              <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/0 via-purple-500/40 to-indigo-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm" />
-              <div className="relative bg-[#0c1520] border border-white/10 rounded-3xl p-2 group-hover:border-white/0 transition-colors duration-500">
-                {/* Image */}
-                <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/30 to-indigo-600/30">
-                  <img src="images/shivani.jpg" alt="Shivani Patil" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-                </div>
-                {/* Content */}
-                <div className="flex flex-col py-5 px-3">
-                  <span className="inline-block w-fit text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-purple-500/15 text-purple-400 border border-purple-500/20 mb-3">Founding Member & Lead Frontend Developer</span>
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Shivani Patil</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-5">Building secure, standards-aligned infrastructure for everyday care. Turning complex tools into intuitive experiences.</p>
-                  <div className="flex items-center gap-4">
-                    <a href="https://tinyurl.com/shivanipatillinkedin" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-purple-300 font-medium text-sm hover:from-purple-500/30 hover:to-indigo-500/30 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-                      LinkedIn
-                    </a>
-                    <span className="text-xs text-slate-600 font-medium">Since 2025</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
