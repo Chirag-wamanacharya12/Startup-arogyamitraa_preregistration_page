@@ -113,7 +113,7 @@ export default function Home() {
             <p className="text-slate-400 text-lg max-w-xl mx-auto">The people shaping a calmer, connected healthcare experience.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
             {/* Card 1 — Chirag */}
             <div className="group relative rounded-3xl overflow-hidden">
               {/* Animated border glow */}
@@ -138,9 +138,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Card 2 — Shivani */}
-
           </div>
         </div>
       </div>
